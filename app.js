@@ -5,6 +5,7 @@ const app = express();
 
 prefix = '/ps';
 
+app.use(helmet());
 app.use(prefix, express.static('public'));
 app.listen(3003);
 
