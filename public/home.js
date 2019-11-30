@@ -1,7 +1,10 @@
 console.log('powerschool-suite');
 
 function getRows() {
-  return document.getElementsByTagName('tr');
+  rows = document.getElementsByTagName('tr');
+	rows.pop(); // remove last row which shows dropped classes
+	            // maintains compat with the original code
+	return rows;
 }
 
 function readScores() {
